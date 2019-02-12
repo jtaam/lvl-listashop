@@ -8,6 +8,6 @@ use App\Http\Controllers\Controller;
 class ShopController extends Controller
 {
     public function shop(){
-        return view('frontend.shop.shop');
+        return view('frontend.shop.index');
     }
 }
