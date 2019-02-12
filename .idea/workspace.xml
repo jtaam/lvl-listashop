@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/index.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,31 +42,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/head.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,7 +83,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/latest_product_area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/clients_logo_area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/most_product_area.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/layouts/shop.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" />
         <option value="$PROJECT_DIR$/database/seeds/ShopCategorySeeder.php" />
@@ -134,6 +107,7 @@
         <option value="$PROJECT_DIR$/database/seeds/UserProfileSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/CommentReplySeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php" />
       </list>
     </option>
   </component>
@@ -231,7 +205,7 @@
       <path value="$PROJECT_DIR$/vendor/psy/psysh" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="8" />
     <option name="y" value="25" />
     <option name="width" value="1254" />
@@ -336,20 +310,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1549911485857</updated>
-      <workItem from="1549911487222" duration="31817000" />
+      <workItem from="1549911487222" duration="32285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31817000" />
+    <option name="totallyTimeSpent" value="32285000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1284" height="1001" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33549434" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33549434" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -691,22 +664,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="190">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/head.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
     </entry>
   </component>
 </project>
