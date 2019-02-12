@@ -82,7 +82,7 @@ return [
         'heroku_pgsql' => [
             'driver' => 'pgsql',
             'host' => $host,
-            'port' => env('DB_PORT', '5432'),
+            'port' => $port,
             'database' => $database,
             'username' => $username,
             'password' => $password,
