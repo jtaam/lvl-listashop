@@ -1,5 +1,14 @@
 <?php
 
+// Heroku Postgres Database
+$url = parse_url(getenv('DATABASE_URL'));
+$host = $url['host']??null;
+$port = $url['port']??null;
+$username = $url['user']??null;
+$password = $url['pass']??null;
+$database = substr($url['path'],1)??null;
+// Heroku Postgres Database
+
 return [
 
     /*
@@ -68,6 +77,18 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+        ],
+
+        'heroku_pgsql' => [
+            'driver' => 'pgsql',
+            'host' => $host,
+            'port' => env('DB_PORT', '5432'),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
         ],
 
         'sqlsrv' => [
