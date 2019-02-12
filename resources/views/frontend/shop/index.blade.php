@@ -35,111 +35,30 @@
                 </nav>
             </div>
         </div>
+
         <div class="latest_product_inner row">
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-1.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
+            @if (isset($products))
+                @foreach ($products as $product)
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="f_p_item">
+                            <div class="f_p_img">
+                                <img class="img-fluid" src="img/product/feature-product/f-p-1.jpg" alt="">
+                                <div class="p_icon">
+                                    <a href="#"><i class="lnr lnr-heart"></i></a>
+                                    <a href="#"><i class="lnr lnr-cart"></i></a>
+                                </div>
+                            </div>
+                            <a href="#"><h4>{{ucfirst($product->title)}}</h4></a>
+                            <h5>${{$product->price}}</h5>
                         </div>
                     </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-2.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-3.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-4.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-5.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-6.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-7.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6">
-                <div class="f_p_item">
-                    <div class="f_p_img">
-                        <img class="img-fluid" src="img/product/feature-product/f-p-8.jpg" alt="">
-                        <div class="p_icon">
-                            <a href="#"><i class="lnr lnr-heart"></i></a>
-                            <a href="#"><i class="lnr lnr-cart"></i></a>
-                        </div>
-                    </div>
-                    <a href="#"><h4>Long Sleeve TShirt</h4></a>
-                    <h5>$150.00</h5>
-                </div>
-            </div>
+                @endforeach
+            @else
+                <h3>No product found!</h3>
+            @endif
+
+
+
         </div>
     </div>
 @endsection
