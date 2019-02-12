@@ -42,7 +42,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="f_p_item">
                             <div class="f_p_img">
-                                <img class="img-fluid" src="img/product/feature-product/f-p-1.jpg" alt="">
+                                <img class="img-fluid" src="{{$product->images[0]->image}}" alt="{{$product->title}}">
                                 <div class="p_icon">
                                     <a href="#"><i class="lnr lnr-heart"></i></a>
                                     <a href="#"><i class="lnr lnr-cart"></i></a>
