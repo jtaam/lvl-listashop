@@ -35,9 +35,6 @@
     @include('frontend.shop.inc.footer')
 <!--================ End footer Area  =================-->
 
-
-
-
 <!-- Optional JavaScript -->
     @include('frontend.shop.partials.footer_scripts')
 </body>
