@@ -1627,7 +1627,7 @@
       <DataType>varchar(191)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="251" name=" box_contains">
+    <column id="367" parent="251" name="box_contains">
       <Position>10</Position>
       <DataType>varchar(191)|0s</DataType>
       <ColumnKind>normal</ColumnKind>

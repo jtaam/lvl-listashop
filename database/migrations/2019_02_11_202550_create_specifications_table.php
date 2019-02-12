@@ -23,7 +23,7 @@ class CreateSpecificationsTable extends Migration
             $table->string('quality_checking')->nullable();
             $table->string('freshness_duration')->nullable();
             $table->string('packeting')->nullable();
-            $table->string(' box_contains')->nullable();
+            $table->string('box_contains')->nullable();
             $table->timestamps();
         });
     }
