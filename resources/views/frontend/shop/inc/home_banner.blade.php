@@ -4,9 +4,8 @@
             <div class="banner_content text-center">
                 <h2>All Products</h2>
                 <div class="page_link">
-                    <a href="index.html">Home</a>
-                    <a href="category.html">Category</a>
-                    <a href="category.html">Women Fashion</a>
+                    <a href="{{route('homepage')}}">Home</a>
+                    <a href="{{route('shop.home')}}">Shop</a>
                 </div>
             </div>
         </div>

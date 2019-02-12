@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
     @include('frontend.website.inc.head')
+</head>
 <body>
 
 <!--================Header Menu Area =================-->
@@ -10,26 +12,10 @@
 </header>
 <!--================Header Menu Area =================-->
 
-<!--================Home Banner Area =================-->
-    @include('frontend.shop.inc.home_banner')
-<!--================End Home Banner Area =================-->
-
-<!--================Category Product Area =================-->
-<section class="cat_product_area p_120">
-    <div class="container">
-        <div class="row flex-row-reverse">
-
-            @yield('content')
-
-            @include('frontend.shop.inc.sidebar')
-
-        </div>
-    </div>
-</section>
-<!--================End Category Product Area =================-->
+    @yield('content')
 
 <!--================Most Product Area =================-->
-    @include('frontend.shop.inc.most_searched_products')
+    @include('frontend.website.inc.most_product_area')
 <!--================End Most Product Area =================-->
 
 <!--================ start footer Area  =================-->
