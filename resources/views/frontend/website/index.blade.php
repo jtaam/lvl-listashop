@@ -1,6 +1,6 @@
 @extends('frontend.layouts.website')
 
-@section('title' | 'ListASite')
+@section('title' , 'Home')
 
 @push('css')
 @endpush
