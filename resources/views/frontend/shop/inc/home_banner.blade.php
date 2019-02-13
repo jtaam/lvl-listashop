@@ -2,11 +2,15 @@
     <div class="banner_inner d-flex align-items-center">
         <div class="container">
             <div class="banner_content text-center">
-                <h2>All Products</h2>
-                <div class="page_link">
-                    <a href="{{route('homepage')}}">Home</a>
-                    <a href="{{route('shop.home')}}">Shop</a>
-                </div>
+                @if (Request::is('shop'))
+                    <h2>All Products</h2>
+                @else
+                    <h2>Product Details</h2>
+                @endif
+                    <div class="page_link">
+                        <a href="{{route('homepage')}}">Home</a>
+                        <a href="{{route('shop.home')}}">Shop</a>
+                    </div>
             </div>
         </div>
     </div>

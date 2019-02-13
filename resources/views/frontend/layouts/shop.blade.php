@@ -21,7 +21,9 @@
 
             @yield('content')
 
-            @include('frontend.shop.inc.sidebar')
+            @if (Request::is('shop'))
+                @include('frontend.shop.inc.sidebar')
+            @endif
 
         </div>
     </div>

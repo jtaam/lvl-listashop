@@ -12,4 +12,9 @@ class ShopController extends Controller
         $products = Product::paginate(16)->onEachSide(1);
         return view('frontend.shop.index', compact('products'));
     }
+
+    public function productDetails($slug){
+        $product = Product::where('slug',$slug)->first();
+        return view('frontend.shop.details', compact('product'));
+    }
 }

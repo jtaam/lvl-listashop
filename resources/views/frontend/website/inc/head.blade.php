@@ -10,4 +10,6 @@
 
 
     @include('frontend.shop.partials.head_styles')
+
+    @stack('css')
 </head>
