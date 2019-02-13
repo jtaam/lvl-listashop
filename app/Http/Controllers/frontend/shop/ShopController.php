@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend\shop;
 
 use App\Models\Shop\Product;
+use App\Models\Shop\Review;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

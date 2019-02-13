@@ -24,4 +24,11 @@ class Product extends Model
         return $this->hasOne(Specification::class);
     }
 
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }

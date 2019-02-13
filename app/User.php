@@ -3,6 +3,9 @@
 namespace App;
 
 use App\Models\Shop\Comment;
+use App\Models\Shop\CommentReply;
+use App\Models\Shop\Review;
+use App\Models\Website\Profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -37,8 +40,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-//
-//    public function comments(){
-//        return $this->hasMany(Comment::class);
-//    }
+
+    // Database Model Relationships
+    public function profile(){
+        return $this->hasOne(Profile::class);
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }

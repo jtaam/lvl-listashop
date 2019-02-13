@@ -118,7 +118,7 @@
                                     <h5>Width</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->width}}mm</h5>
+                                    <h5>{{$product->specification->width}} mm</h5>
                                 </td>
                             </tr>
                             <tr>
@@ -126,7 +126,7 @@
                                     <h5>Height</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->height}}mm</h5>
+                                    <h5>{{$product->specification->height}} mm</h5>
                                 </td>
                             </tr>
                             <tr>
@@ -134,7 +134,7 @@
                                     <h5>Depth</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->depth}}mm</h5>
+                                    <h5>{{$product->specification->depth}} mm</h5>
                                 </td>
                             </tr>
                             <tr>
@@ -142,7 +142,7 @@
                                     <h5>Weight</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->weight}}gm</h5>
+                                    <h5>{{$product->specification->weight}} gm</h5>
                                 </td>
                             </tr>
                             <tr>
@@ -162,7 +162,7 @@
                                     <h5>Freshness Duration</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->freshness_duration}}days</h5>
+                                    <h5>{{$product->specification->freshness_duration}} days</h5>
                                 </td>
                             </tr>
                             <tr>
@@ -178,7 +178,7 @@
                                     <h5>Each Box contains</h5>
                                 </td>
                                 <td>
-                                    <h5>{{$product->specification->box_contains}}pcs</h5>
+                                    <h5>{{$product->specification->box_contains}} pcs</h5>
                                 </td>
                             </tr>
                             </tbody>
@@ -190,47 +190,24 @@
                         <div class="col-lg-6">
                             <div class="comment_list">
 
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-1.png" alt="">
+                                @if (isset($product->comments))
+                                    @foreach ($product->comments as $comment)
+                                        <div class="review_item">
+                                            <div class="media">
+                                                <div class="d-flex">
+                                                    <img src="{{$comment->user->profile->avatar}}" alt="{{$comment->user->name}}">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4>{{$comment->user->name}}</h4>
+                                                    <h5>{{date('jS M',strtotime($comment->created_at))}}, {{date('Y', strtotime($comment->created_at))}} at {{date('h:i a', strtotime($comment->created_at))}}</h5>
+                                                </div>
+                                            </div>
+                                            <p>{{$comment->message}}</p>
                                         </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <h5>12th Feb, 2017 at 05:56 pm</h5>
-                                            <a class="reply_btn" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
+                                    @endforeach
+                                @endif
 
-                                <div class="review_item reply">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-2.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <h5>12th Feb, 2017 at 05:56 pm</h5>
-                                            <a class="reply_btn" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
 
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-3.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <h5>12th Feb, 2017 at 05:56 pm</h5>
-                                            <a class="reply_btn" href="#">Reply</a>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -272,10 +249,17 @@
                                 <div class="col-6">
                                     <div class="box_total">
                                         <h5>Overall</h5>
-                                        <h4>4.0</h4>
-                                        <h6>(03 Reviews)</h6>
+                                        @if ($product->reviews->count() > 1)
+                                            <h4>{{$product->reviews->sum('stars')/5}}</h4>
+                                            <h6>({{$product->reviews->count()}} Reviews)</h6>
+                                        @else
+                                            <h4>No review yet, be the first!</h4>
+                                            <h6>(00 Reviews)</h6>
+                                        @endif
+
                                     </div>
                                 </div>
+
                                 <div class="col-6">
                                     <div class="rating_list">
                                         <h3>Based on 3 Reviews</h3>
@@ -288,56 +272,29 @@
                                         </ul>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="review_list">
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-1.png" alt="">
+
+                                @if (isset($product->reviews))
+                                    @foreach ($product->reviews as $productReview)
+                                        <div class="review_item">
+                                            <div class="media">
+                                                <div class="d-flex">
+                                                    <img src="{{$productReview->user->profile->avatar}}" alt="{{$productReview->user->name}}">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4>{{$productReview->user->name}}</h4>
+                                                    @for ($i = 0; $i < $productReview->stars; $i++)
+                                                       <i class="fa fa-star"></i>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                            <p>{{$productReview->message}}</p>
                                         </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-2.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
-                                <div class="review_item">
-                                    <div class="media">
-                                        <div class="d-flex">
-                                            <img src="img/product/single-product/review-3.png" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4>Blake Ruiz</h4>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                                </div>
+                                    @endforeach
+                                @endif
+
                             </div>
                         </div>
                         <div class="col-lg-6">
