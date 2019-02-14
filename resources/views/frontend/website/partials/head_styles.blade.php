@@ -10,3 +10,4 @@
 <!-- main css -->
 <link rel="stylesheet" href="{{asset('assets/frontend/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('assets/frontend/css/responsive.css')}}">
+

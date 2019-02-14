@@ -12,6 +12,8 @@
             width: 100%;
         }
     </style>
+    {{--Toastr--}}
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 @endpush
 
 @section('content')
@@ -213,27 +215,46 @@
                         <div class="col-lg-6">
                             <div class="review_box">
                                 <h4>Post a comment</h4>
-                                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
+                                <form class="row contact_form" action="{{route('shop.comment.store', $product->id)}}" method="post" id="contactForm" novalidate="novalidate">
+                                    @csrf
+                                    @guest()
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="number" name="number" placeholder="Phone Number">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @else
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                    @endguest
+
                                     <div class="col-md-12 text-right">
                                         <button type="submit" value="submit" class="btn submit_btn">Submit Now</button>
                                     </div>
@@ -249,11 +270,11 @@
                                 <div class="col-6">
                                     <div class="box_total">
                                         <h5>Overall</h5>
-                                        @if ($product->reviews->count() > 1)
-                                            <h4>{{$product->reviews->sum('stars')/5}}</h4>
+                                        @if ($product->reviews->count() > 0)
+                                            <h4>{{round($product->reviews->sum('stars')/$product->reviews->count())}}</h4>
                                             <h6>({{$product->reviews->count()}} Reviews)</h6>
                                         @else
-                                            <h4>No review yet, be the first!</h4>
+                                            <h5>No review yet, be the first!</h5>
                                             <h6>(00 Reviews)</h6>
                                         @endif
 

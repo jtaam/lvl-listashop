@@ -23,6 +23,7 @@
                             <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                         <ul class="dropdown-menu">
@@ -30,10 +31,12 @@
                             <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
                         </ul>
                     </li>
+
                     <li class="nav-item submenu dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                         <ul class="dropdown-menu">
-                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a>
+                            <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Login</a>
+                            <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Registration</a>
                             <li class="nav-item"><a class="nav-link" href="tracking.html">Tracking</a>
                             <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
                         </ul>

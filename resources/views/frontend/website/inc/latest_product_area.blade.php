@@ -18,7 +18,7 @@
                                             <a href="#"><i class="lnr lnr-cart"></i></a>
                                         </div>
                                     </div>
-                                    <a href="#"><h4>{{ucfirst($product->title)}}</h4></a>
+                                    <a href="{{route('shop.product.details', $product->slug)}}"><h4>{{ucfirst($product->title)}}</h4></a>
                                     <h5>${{$product->price}}</h5>
                                 </div>
                             </div>

@@ -13,6 +13,7 @@
     @include('frontend.website.inc.main_menu')
 </header>
 <!--================Header Menu Area =================-->
+    @include('frontend.website.inc.page_banner')
 
     @yield('content')
 

@@ -14,5 +14,7 @@
 <script src="{{asset('assets/frontend/vendors/counter-up/jquery.waypoints.min.js')}}"></script>
 <script src="{{asset('assets/frontend/vendors/counter-up/jquery.counterup.js')}}"></script>
 <script src="{{asset('assets/frontend/js/theme.js')}}"></script>
-
+{{--Toastr--}}
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+{!! Toastr::message() !!}
 @stack('js')
