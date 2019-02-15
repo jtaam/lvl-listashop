@@ -11,6 +11,132 @@
         .product_description_area{
             width: 100%;
         }
+        .details-login-link{
+            color: #c5322d;
+        }
+        .details-login-link:hover{
+            color: #222222;
+        }
+        /*Product Review*/
+        /*.rating {*/
+            /*display: inline-block;*/
+            /*position: relative;*/
+            /*height: 50px;*/
+            /*line-height: 50px;*/
+            /*font-size: 50px;*/
+        /*}*/
+
+        /*.rating label {*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*height: 100%;*/
+            /*cursor: pointer;*/
+        /*}*/
+
+        /*.rating label:last-child {*/
+            /*position: static;*/
+        /*}*/
+
+        /*.rating label:nth-child(1) {*/
+            /*z-index: 5;*/
+        /*}*/
+
+        /*.rating label:nth-child(2) {*/
+            /*z-index: 4;*/
+        /*}*/
+
+        /*.rating label:nth-child(3) {*/
+            /*z-index: 3;*/
+        /*}*/
+
+        /*.rating label:nth-child(4) {*/
+            /*z-index: 2;*/
+        /*}*/
+
+        /*.rating label:nth-child(5) {*/
+            /*z-index: 1;*/
+        /*}*/
+
+        /*.rating label input {*/
+            /*position: absolute;*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*opacity: 0;*/
+        /*}*/
+
+        /*.rating label .icon {*/
+            /*float: left;*/
+            /*color: transparent;*/
+        /*}*/
+
+        /*.rating label:last-child .icon {*/
+            /*color: #000;*/
+        /*}*/
+
+        /*.rating:not(:hover) label input:checked ~ .icon,*/
+        /*.rating:hover label:hover input ~ .icon {*/
+            /*color: #09f;*/
+        /*}*/
+
+        /*.rating label input:focus:not(:checked) ~ .icon:last-child {*/
+            /*color: #000;*/
+            /*text-shadow: 0 0 5px #09f;*/
+        /*}*/
+        <style amp-custom>
+         .rating {
+             --star-size: 3;  /* use CSS variables to calculate dependent dimensions later */
+             padding: 0;  /* to prevent flicker when mousing over padding */
+             border: none;  /* to prevent flicker when mousing over border */
+             unicode-bidi: bidi-override; direction: rtl;  /* for CSS-only style change on hover */
+             text-align: left;  /* revert the RTL direction */
+             user-select: none;  /* disable mouse/touch selection */
+             font-size: 3em;  /* fallback - IE doesn't support CSS variables */
+             font-size: calc(var(--star-size) * 1em);  /* because `var(--star-size)em` would be too good to be true */
+             cursor: pointer;
+             /* disable touch feedback on cursor: pointer - http://stackoverflow.com/q/25704650/1269037 */
+             -webkit-tap-highlight-color: rgba(0,0,0,0);
+             -webkit-tap-highlight-color: transparent;
+             margin-bottom: 1em;
+         }
+        /* the stars */
+        .rating > label {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;  /* magic number to overlap the radio buttons on top of the stars */
+            width: calc(var(--star-size) / 3 * 1.1em);
+        }
+        .rating > *:hover,
+        .rating > *:hover ~ label,
+        .rating:not(:hover) > input:checked ~ label {
+            color: transparent;  /* reveal the contour/white star from the HTML markup */
+            cursor: inherit;  /* avoid a cursor transition from arrow/pointer to text selection */
+        }
+        .rating > *:hover:before,
+        .rating > *:hover ~ label:before,
+        .rating:not(:hover) > input:checked ~ label:before {
+            content: "★";
+            position: absolute;
+            left: 0;
+            color: gold;
+        }
+        .rating > input {
+            position: relative;
+            transform: scale(3);  /* make the radio buttons big; they don't inherit font-size */
+            transform: scale(var(--star-size));
+            /* the magic numbers below correlate with the font-size */
+            top: -0.5em;  /* margin-top doesn't work */
+            top: calc(var(--star-size) / 6 * -1em);
+            margin-left: -2.5em;  /* overlap the radio buttons exactly under the stars */
+            margin-left: calc(var(--star-size) / 6 * -5em);
+            z-index: 2;  /* bring the button above the stars so it captures touches/clicks */
+            opacity: 0;  /* comment to see where the radio buttons are */
+            font-size: initial; /* reset to default */
+        }
+        form.amp-form-submit-error [submit-error] {
+            color: red;
+        }
+    </style>
     </style>
     {{--Toastr--}}
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
@@ -108,262 +234,26 @@
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
+
                 <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <p>{!! $product->description !!}</p>
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                            <tr>
-                                <td>
-                                    <h5>Width</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->width}} mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Height</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->height}} mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Depth</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->depth}} mm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Weight</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->weight}} gm</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Quality checking</h5>
-                                </td>
-                                <td>
-                                    <h5>@if ($product->specification->quality_checking == 1)
-                                        Yes
-                                            @else
-                                            No
-                                    @endif</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Freshness Duration</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->freshness_duration}} days</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>When packeting</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->packeting}}</h5>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <h5>Each Box contains</h5>
-                                </td>
-                                <td>
-                                    <h5>{{$product->specification->box_contains}} pcs</h5>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="tab-pane fade active show" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="comment_list">
 
-                                @if (isset($product->comments))
-                                    @foreach ($product->comments as $comment)
-                                        <div class="review_item">
-                                            <div class="media">
-                                                <div class="d-flex">
-                                                    <img src="{{$comment->user->profile->avatar}}" alt="{{$comment->user->name}}">
-                                                </div>
-                                                <div class="media-body">
-                                                    <h4>{{$comment->user->name}}</h4>
-                                                    <h5>{{date('jS M',strtotime($comment->created_at))}}, {{date('Y', strtotime($comment->created_at))}} at {{date('h:i a', strtotime($comment->created_at))}}</h5>
-                                                </div>
-                                            </div>
-                                            <p>{{$comment->message}}</p>
-                                        </div>
-                                    @endforeach
-                                @endif
+                @include('frontend.shop.inc.product-specification-area')
 
+                @include('frontend.shop.inc.product-comment-area')
 
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="review_box">
-                                <h4>Post a comment</h4>
-                                <form class="row contact_form" action="{{route('shop.comment.store', $product->id)}}" method="post" id="contactForm" novalidate="novalidate">
-                                    @csrf
-                                    @guest()
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                    @else
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                    @endguest
-
-                                    <div class="col-md-12 text-right">
-                                        <button type="submit" value="submit" class="btn submit_btn">Submit Now</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="row total_rate">
-                                <div class="col-6">
-                                    <div class="box_total">
-                                        <h5>Overall</h5>
-                                        @if ($product->reviews->count() > 0)
-                                            <h4>{{round($product->reviews->sum('stars')/$product->reviews->count())}}</h4>
-                                            <h6>({{$product->reviews->count()}} Reviews)</h6>
-                                        @else
-                                            <h5>No review yet, be the first!</h5>
-                                            <h6>(00 Reviews)</h6>
-                                        @endif
-
-                                    </div>
-                                </div>
-
-                                <div class="col-6">
-                                    <div class="rating_list">
-                                        <h3>Based on 3 Reviews</h3>
-                                        <ul class="list">
-                                            <li><a href="#">5 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                            <li><a href="#">4 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                            <li><a href="#">3 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                            <li><a href="#">2 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                            <li><a href="#">1 Star <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="review_list">
-
-                                @if (isset($product->reviews))
-                                    @foreach ($product->reviews as $productReview)
-                                        <div class="review_item">
-                                            <div class="media">
-                                                <div class="d-flex">
-                                                    <img src="{{$productReview->user->profile->avatar}}" alt="{{$productReview->user->name}}">
-                                                </div>
-                                                <div class="media-body">
-                                                    <h4>{{$productReview->user->name}}</h4>
-                                                    @for ($i = 0; $i < $productReview->stars; $i++)
-                                                       <i class="fa fa-star"></i>
-                                                    @endfor
-                                                </div>
-                                            </div>
-                                            <p>{{$productReview->message}}</p>
-                                        </div>
-                                    @endforeach
-                                @endif
-
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="review_box">
-                                <h4>Add a Review</h4>
-                                <p>Your Rating:</p>
-                                <ul class="list">
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-star"></i></a></li>
-                                </ul>
-                                <p>Outstanding</p>
-                                <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Full name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="number" name="number" placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Review"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 text-right">
-                                        <button type="submit" value="submit" class="btn submit_btn">Submit Now</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @include('frontend.shop.inc.product-review-area')
             </div>
         </div>
     </section>
 @endsection
 
 @push('js')
-
+    {{--<script>--}}
+        {{--$(':radio').change(function() {--}}
+            {{--console.log('New star rating: ' + this.value);--}}
+        {{--});--}}
+    {{--</script>--}}
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
 @endpush

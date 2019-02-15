@@ -32,6 +32,7 @@
                         <li class="page-item"><a class="page-link" href="#">6</a></li>
                         <li class="page-item"><a class="page-link" href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></li>
                     </ul>
+                    {{$products->links()}}
                 </nav>
             </div>
         </div>
@@ -56,8 +57,6 @@
             @else
                 <h3>No product found!</h3>
             @endif
-
-
 
         </div>
     </div>

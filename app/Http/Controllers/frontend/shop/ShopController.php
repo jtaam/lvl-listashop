@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class ShopController extends Controller
 {
     public function shop(){
-        $products = Product::paginate(16)->onEachSide(1);
+        $products = Product::paginate(15)->onEachSide(3);
         return view('frontend.shop.index', compact('products'));
     }
 
