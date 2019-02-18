@@ -6,37 +6,24 @@
             </div>
             <div class="widgets_inner">
                 <ul class="list">
-                    <li><a href="#">Fruits and Vegetables</a></li>
-                    <li>
-                        <a href="#">Meat and Fish</a>
-                        <ul class="list">
-                            <li><a href="#">Frozen Fish</a></li>
-                            <li><a href="#">Dried Fish</a></li>
-                            <li><a href="#">Fresh Fish</a></li>
-                            <li><a href="#">Meat Alternatives</a></li>
-                            <li><a href="#">Meat</a></li>
 
-                        </ul>
-                    </li>
-                    <li><a href="#">Cooking</a>
-                        <ul class="list">
-                            <li><a href="#">Frozen Fish</a></li>
-                            <li><a href="#">Dried Fish</a></li>
-                            <li><a href="#">Fresh Fish</a></li>
-                            <li><a href="#">Meat Alternatives</a></li>
-                            <li><a href="#">Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Beverages</a>
-                        <ul class="list">
-                            <li><a href="#">Frozen Fish</a></li>
-                            <li><a href="#">Dried Fish</a></li>
-                            <li><a href="#">Fresh Fish</a></li>
-                            <li><a href="#">Meat Alternatives</a></li>
-                            <li><a href="#">Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Home and Cleaning</a></li>
+                    @if (isset($parentCategories))
+                        @foreach ($parentCategories as $subCategory)
+                            <li><a href="#">{{title_case($subCategory->name)}}</a>
+                                <ul class="list">
+
+                                    @if (isset($subCategory->categories))
+                                        @foreach ($subCategory->categories as $category)
+                                            <li><a href="#">{{title_case($category->name)}}</a></li>
+                                        @endforeach
+
+                                    @endif
+
+                                </ul>
+                            </li>
+                        @endforeach
+                    @endif
+
                 </ul>
             </div>
         </aside>

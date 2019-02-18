@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/93de231a-2633-4cc1-a996-6d339dd19c3d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/93de231a-2633-4cc1-a996-6d339dd19c3d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Shop/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Shop/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_18_021849_add_parent_it_to_shop_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_18_021849_add_parent_it_to_shop_category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -46,6 +43,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="laravel_tamjid_listashop: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="laravel_tamjid_listashop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="laravel_tamjid_listashop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="categories: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -53,7 +57,26 @@
     <favorites_list name="listashop" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -68,11 +91,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/clients_logo_area.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_12_204032_create_featureds_table.php" />
         <option value="$PROJECT_DIR$/database/factories/FeaturedProduct.php" />
         <option value="$PROJECT_DIR$/database/seeds/FeaturedProduct.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/website/HomePageController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/detail.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/Specification.php" />
@@ -112,13 +133,15 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-review-area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_17_171207_create_parent_categories_table.php" />
         <option value="$PROJECT_DIR$/database/factories/ParentCategory.php" />
         <option value="$PROJECT_DIR$/database/seeds/ParentCategory.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/ParentCategory.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/Category.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_18_021849_add_parent_it_to_shop_category.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" />
       </list>
     </option>
   </component>
@@ -236,6 +259,16 @@
               <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
               <item name="listashop" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listashop" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listashop" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -295,17 +328,18 @@
       <workItem from="1550194464457" duration="9582000" />
       <workItem from="1550394646985" duration="1131000" />
       <workItem from="1550422269728" duration="1445000" />
-      <workItem from="1550435766187" duration="1672000" />
+      <workItem from="1550435766187" duration="3482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95866000" />
+    <option name="totallyTimeSpent" value="97676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1284" height="1001" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49595377" visible="true" weight="0.1961102" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49595377" weight="0.27309564" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50404626" side_tool="true" weight="0.18962723" />
@@ -357,14 +391,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register-off.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/page_banner.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -594,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/categories">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/brands">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -618,24 +637,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="64" column="66" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/shop.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -694,6 +699,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_11_202203_create_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_18_021849_add_parent_it_to_shop_category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
         </state>
       </provider>
     </entry>

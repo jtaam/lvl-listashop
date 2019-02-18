@@ -37,11 +37,20 @@ View::composer('frontend.website.inc.feature_product_area', function($view)
     $view->with('featuredProducts', $featuredProducts);
 });
 
+
+
+View::composer('frontend.shop.inc.sidebar', function($view)
+{
+    $parentCategories = \App\Models\Shop\ParentCategory::all();
+    $view->with('parentCategories',$parentCategories);
+});
+
 View::composer('frontend.shop.inc.sidebar', function($view)
 {
     $categories = \App\Models\Shop\Category::all();
     $view->with('categories',$categories);
 });
+
 View::composer('frontend.shop.inc.sidebar', function($view)
 {
     $brands = \App\Models\Shop\Brand::all();

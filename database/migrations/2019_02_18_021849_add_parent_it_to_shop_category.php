@@ -14,7 +14,7 @@ class AddParentItToShopCategory extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->unsignedInteger('parent_id')->after('slug')->default(0);
+            $table->unsignedInteger('parent_category_id')->after('slug')->default(0);
         });
     }
 
@@ -26,7 +26,7 @@ class AddParentItToShopCategory extends Migration
     public function down()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->dropColumn('parent_id');
+            $table->dropColumn('parent_category_id');
         });
     }
 }
