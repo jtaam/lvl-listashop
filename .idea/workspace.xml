@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-comment-area.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-review-area.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-specification-area.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/93de231a-2633-4cc1-a996-6d339dd19c3d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/93de231a-2633-4cc1-a996-6d339dd19c3d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/inc/most_searched_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/most_searched_products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/inc/feature_product_area.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/inc/feature_product_area.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/inc/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/inc/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/inc/most_product_area.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/inc/most_product_area.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Shop/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Shop/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,26 +53,7 @@
     <favorites_list name="listashop" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/product-review-area.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/product-comment-area.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,12 +68,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Models/Shop/Color.php" />
-        <option value="$PROJECT_DIR$/app/Models/Shop/CommentReply.php" />
-        <option value="$PROJECT_DIR$/app/Models/Shop/Tag.php" />
-        <option value="$PROJECT_DIR$/database/seeds/ProductSeeder.php" />
-        <option value="$PROJECT_DIR$/database/factories/Product.php" />
-        <option value="$PROJECT_DIR$/app/Models/Shop/Image.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/clients_logo_area.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_12_204032_create_featureds_table.php" />
         <option value="$PROJECT_DIR$/database/factories/FeaturedProduct.php" />
@@ -105,7 +75,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/website/HomePageController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/detail.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Shop/Category.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/Specification.php" />
         <option value="$PROJECT_DIR$/app/Models/Website/Profile.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
@@ -130,19 +99,26 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-specification-area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-comment-area.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/most_searched_products.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/most_searched_products.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/most_product_area.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/Product.php" />
         <option value="$PROJECT_DIR$/app/Models/Shop/Featured.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/feature_product_area.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ReviewController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/product-review-area.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_17_171207_create_parent_categories_table.php" />
+        <option value="$PROJECT_DIR$/database/factories/ParentCategory.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ParentCategory.php" />
+        <option value="$PROJECT_DIR$/app/Models/Shop/ParentCategory.php" />
+        <option value="$PROJECT_DIR$/app/Models/Shop/Category.php" />
       </list>
     </option>
   </component>
@@ -252,6 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,124 +236,10 @@
               <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
               <item name="listashop" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Models" type="462c0819:PsiDirectoryNode" />
-              <item name="Shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="inc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="listashop" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -387,6 +250,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="database.data.csv.formats" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/frontend/shop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/frontend" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -421,18 +292,20 @@
       <workItem from="1550025118734" duration="662000" />
       <workItem from="1550064878660" duration="22917000" />
       <workItem from="1550106620536" duration="13513000" />
-      <workItem from="1550194464457" duration="9386000" />
+      <workItem from="1550194464457" duration="9582000" />
+      <workItem from="1550394646985" duration="1131000" />
+      <workItem from="1550422269728" duration="1445000" />
+      <workItem from="1550435766187" duration="1672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91422000" />
+    <option name="totallyTimeSpent" value="95866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1284" height="1001" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49595377" weight="0.18962723" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49595377" visible="true" weight="0.1961102" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50404626" side_tool="true" weight="0.18962723" />
@@ -447,7 +320,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.59768784" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5965318" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32947975" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -455,99 +328,35 @@
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info anchor="right" id="Database" order="4" weight="0.23419774" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49595377" visible="true" weight="0.19286872" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" sideWeight="0.50404626" side_tool="true" weight="0.18962723" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.32947975" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.5965318" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.32947975" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.23419774" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/comment_replies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Website/Profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="10" column="45" lean-forward="true" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <element signature="e#38#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_13_195552_drop_table_reviews.php" />
-    <entry file="file://$PROJECT_DIR$/database/seeds/ReviewSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/ProductReview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/products">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="e#23#51#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/latest_product_area.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="20" column="91" selection-start-line="20" selection-start-column="91" selection-end-line="20" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-456">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/home_banner_area.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="92" selection-start-line="38" selection-start-column="92" selection-end-line="38" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login-off.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register-off.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -619,13 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/shop.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="2" column="41" lean-forward="true" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -704,13 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/featureds">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -730,13 +525,6 @@
         <state relative-caret-position="-228" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Shop/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -748,13 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -794,8 +575,125 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/product-review-area.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="-1105">
           <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/tags">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/brands">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/frontend/shop/ShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#54#83#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="64" column="66" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/shop.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/CommentsSeeder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/Product.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ProductSeeder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Shop/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Shop/ParentCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ParentCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/parent_categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/ParentCategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_17_171207_create_parent_categories_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>

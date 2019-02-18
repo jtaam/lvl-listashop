@@ -15,6 +15,7 @@
                             <li><a href="#">Fresh Fish</a></li>
                             <li><a href="#">Meat Alternatives</a></li>
                             <li><a href="#">Meat</a></li>
+
                         </ul>
                     </li>
                     <li><a href="#">Cooking</a>
@@ -46,21 +47,27 @@
             <div class="widgets_inner">
                 <h4>Brand</h4>
                 <ul class="list">
-                    <li><a href="#">Apple</a></li>
-                    <li><a href="#">Asus</a></li>
-                    <li class="active"><a href="#">Gionee</a></li>
-                    <li><a href="#">Micromax</a></li>
-                    <li><a href="#">Samsung</a></li>
+                    @if (isset($brands))
+                        @foreach ($brands as $brand)
+                            <li><a href="#">{{ucfirst($brand->name)}}</a></li>
+                        @endforeach
+                    @endif
+
+                    {{--<li class="active"><a href="#">Gionee</a></li>--}}
+
                 </ul>
             </div>
             <div class="widgets_inner">
                 <h4>Color</h4>
                 <ul class="list">
-                    <li><a href="#">Black</a></li>
-                    <li><a href="#">Black Leather</a></li>
-                    <li class="active"><a href="#">Black with red</a></li>
-                    <li><a href="#">Gold</a></li>
-                    <li><a href="#">Spacegrey</a></li>
+                    @if (isset($colors))
+                        @foreach ($colors as $color)
+                            <li><a href="#">{{ucfirst($color->name)}}</a></li>
+                        @endforeach
+                    @endif
+
+                    {{--<li class="active"><a href="#">Black with red</a></li>--}}
+
                 </ul>
             </div>
             <div class="widgets_inner">
