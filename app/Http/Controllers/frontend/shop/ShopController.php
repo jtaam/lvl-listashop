@@ -11,7 +11,7 @@ use App\Http\Controllers\Controller;
 class ShopController extends Controller
 {
     public function shop(){
-        $products = Product::paginate(15);
+        $products = Product::paginate(9);
         return view('frontend.shop.shop', compact('products'));
     }
 
