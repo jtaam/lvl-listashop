@@ -18,93 +18,29 @@
             color: #222222;
         }
         /*Product Review*/
-        /*.rating {*/
-            /*display: inline-block;*/
-            /*position: relative;*/
-            /*height: 50px;*/
-            /*line-height: 50px;*/
-            /*font-size: 50px;*/
-        /*}*/
-
-        /*.rating label {*/
-            /*position: absolute;*/
-            /*top: 0;*/
-            /*left: 0;*/
-            /*height: 100%;*/
-            /*cursor: pointer;*/
-        /*}*/
-
-        /*.rating label:last-child {*/
-            /*position: static;*/
-        /*}*/
-
-        /*.rating label:nth-child(1) {*/
-            /*z-index: 5;*/
-        /*}*/
-
-        /*.rating label:nth-child(2) {*/
-            /*z-index: 4;*/
-        /*}*/
-
-        /*.rating label:nth-child(3) {*/
-            /*z-index: 3;*/
-        /*}*/
-
-        /*.rating label:nth-child(4) {*/
-            /*z-index: 2;*/
-        /*}*/
-
-        /*.rating label:nth-child(5) {*/
-            /*z-index: 1;*/
-        /*}*/
-
-        /*.rating label input {*/
-            /*position: absolute;*/
-            /*top: 0;*/
-            /*left: 0;*/
-            /*opacity: 0;*/
-        /*}*/
-
-        /*.rating label .icon {*/
-            /*float: left;*/
-            /*color: transparent;*/
-        /*}*/
-
-        /*.rating label:last-child .icon {*/
-            /*color: #000;*/
-        /*}*/
-
-        /*.rating:not(:hover) label input:checked ~ .icon,*/
-        /*.rating:hover label:hover input ~ .icon {*/
-            /*color: #09f;*/
-        /*}*/
-
-        /*.rating label input:focus:not(:checked) ~ .icon:last-child {*/
-            /*color: #000;*/
-            /*text-shadow: 0 0 5px #09f;*/
-        /*}*/
-        <style amp-custom>
-         .rating {
-             --star-size: 3;  /* use CSS variables to calculate dependent dimensions later */
-             padding: 0;  /* to prevent flicker when mousing over padding */
-             border: none;  /* to prevent flicker when mousing over border */
-             unicode-bidi: bidi-override; direction: rtl;  /* for CSS-only style change on hover */
-             text-align: left;  /* revert the RTL direction */
-             user-select: none;  /* disable mouse/touch selection */
-             font-size: 3em;  /* fallback - IE doesn't support CSS variables */
-             font-size: calc(var(--star-size) * 1em);  /* because `var(--star-size)em` would be too good to be true */
-             cursor: pointer;
-             /* disable touch feedback on cursor: pointer - http://stackoverflow.com/q/25704650/1269037 */
-             -webkit-tap-highlight-color: rgba(0,0,0,0);
-             -webkit-tap-highlight-color: transparent;
-             margin-bottom: 1em;
-         }
+    </style>
+    <style amp-custom>
+        .rating {
+            --star-size: 1.5;  /* use CSS variables to calculate dependent dimensions later */
+            padding: 0;  /* to prevent flicker when mousing over padding */
+            border: none;  /* to prevent flicker when mousing over border */
+            unicode-bidi: bidi-override; direction: rtl;  /* for CSS-only style change on hover */
+            text-align: left;  /* revert the RTL direction */
+            user-select: none;  /* disable mouse/touch selection */
+            font-size: 2em;  /* fallback - IE doesn't support CSS variables */
+            font-size: calc(var(--star-size) * 1em);  /* because `var(--star-size)em` would be too good to be true */
+            cursor: pointer;
+            /* disable touch feedback on cursor: pointer - http://stackoverflow.com/q/25704650/1269037 */
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent;
+            margin-bottom: 1em;
+        }
         /* the stars */
         .rating > label {
             display: inline-block;
             position: relative;
-            width: 1.1em;  /* magic number to overlap the radio buttons on top of the stars */
-            width: calc(var(--star-size) / 3 * 1.1em);
+            width: 1.0em;  /* magic number to overlap the radio buttons on top of the stars */
+            width: calc(var(--star-size) / 3 * 1.0em);
         }
         .rating > *:hover,
         .rating > *:hover ~ label,
@@ -136,7 +72,6 @@
         form.amp-form-submit-error [submit-error] {
             color: red;
         }
-    </style>
     </style>
     {{--Toastr--}}
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
@@ -196,7 +131,7 @@
                         <h3>{{ucfirst($product->title)}}</h3>
                         <h2>${{$product->price}}</h2>
                         <ul class="list">
-                            <li><a class="active" href="#"><span>Category</span> : {{ucfirst($product->category->name)}}</a></li>
+                            <li><a class="active" href="{{route('shop.productsByCategory', $product->category->slug)}}"><span>Category</span> : {{ucfirst($product->category->name)}}</a></li>
                             <li><a href="#"><span>Availibility</span> : In Stock</a></li>
                         </ul>
                         <p>{{$product->sub_title}}</p>

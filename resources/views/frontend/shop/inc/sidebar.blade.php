@@ -14,7 +14,7 @@
 
                                     @if (isset($subCategory->categories))
                                         @foreach ($subCategory->categories as $category)
-                                            <li><a href="#">{{title_case($category->name)}}</a></li>
+                                            <li><a href="{{route('shop.productsByCategory', $category->slug)}}">{{title_case($category->name)}}</a></li>
                                         @endforeach
 
                                     @endif

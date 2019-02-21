@@ -17,18 +17,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('shop','frontend\shop\ShopController@shop')->name('shop.home');
-
-// Category
-Route::get('shop/{category}', 'frontend\shop\ShopController@productsByCategory')->name('shop.productsByCategory');
-//// Tag
-//Route::get('/news/tag/{tag}', 'Frontend\News\ArticleController@articlesByTag')->name('articlesByTag');
-
-Route::get('shop/product/{slug}','frontend\shop\ShopController@productDetails')->name('shop.product.details');
-// Comment
-Route::post('shop/product/comment/{productId}','frontend\shop\CommentController@commentStore')->name('shop.comment.store');
-// Review
-Route::post('shop/product/review/{productId}','frontend\shop\ReviewController@reviewStore')->name('shop.review.store');
+// Shop routes
+@include 'shop/shop-routes.php';
+// Shop routes
 
 View::composer('frontend.website.inc.feature_product_area', function($view)
 {
@@ -36,8 +27,6 @@ View::composer('frontend.website.inc.feature_product_area', function($view)
     $featuredProducts = \App\Models\Shop\Featured::all();
     $view->with('featuredProducts', $featuredProducts);
 });
-
-
 
 View::composer('frontend.shop.inc.sidebar', function($view)
 {
