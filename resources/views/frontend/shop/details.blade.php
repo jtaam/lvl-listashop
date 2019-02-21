@@ -132,7 +132,15 @@
                         <h2>${{$product->price}}</h2>
                         <ul class="list">
                             <li><a class="active" href="{{route('shop.productsByCategory', $product->category->slug)}}"><span>Category</span> : {{ucfirst($product->category->name)}}</a></li>
-                            <li><a href="#"><span>Availibility</span> : In Stock</a></li>
+                            <li>
+                                <a href="#"><span>Availibility</span> :
+                                    @if ($product->stock->amount > 0)
+                                        In Stock
+                                    @else
+                                        No Stock
+                                    @endif
+                                </a>
+                            </li>
                         </ul>
                         <p>{{$product->sub_title}}</p>
                         <div class="product_count">
