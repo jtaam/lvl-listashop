@@ -11,8 +11,8 @@ use App\Http\Controllers\Controller;
 class ShopController extends Controller
 {
     public function shop(){
-        $products = Product::paginate(15)->onEachSide(3);
-        return view('frontend.shop.index', compact('products'));
+        $products = Product::paginate(15);
+        return view('frontend.shop.shop', compact('products'));
     }
 
     public function productDetails($slug){

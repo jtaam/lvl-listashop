@@ -7,7 +7,9 @@
             </li>
         @else
             <li>
-                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">&lsaquo;</a>
+                <a href="{{ $paginator->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+                </a>
             </li>
         @endif
 
@@ -23,8 +25,10 @@
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
                         <li class="active" aria-current="page"><span>{{ $page }}</span></li>
+                        <li class="page-item active"><a class="page-link" href="#">{{ $page }}</a></li>
                     @else
-                        <li><a href="{{ $url }}">{{ $page }}</a></li>
+                        <li class="page-item"><a class="page-link" href="{{ $url }}">{{ $page }}</a></li>
+                        {{--<li><a href="{{ $url }}">{{ $page }}</a></li>--}}
                     @endif
                 @endforeach
             @endif
@@ -32,9 +36,14 @@
 
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <li>
-                <a href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">&rsaquo;</a>
+            <li class="page-item">
+                <a class="page-link" href="{{ $paginator->nextPageUrl() }}">
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </a>
             </li>
+            {{--<li>--}}
+                {{--<a href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">&rsaquo;</a>--}}
+            {{--</li>--}}
         @else
             <li class="disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
                 <span aria-hidden="true">&rsaquo;</span>
