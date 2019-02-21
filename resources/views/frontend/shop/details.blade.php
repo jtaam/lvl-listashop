@@ -72,6 +72,9 @@
         form.amp-form-submit-error [submit-error] {
             color: red;
         }
+        .rating .fa-star{
+            font-size: 70% !important;
+        }
     </style>
     {{--Toastr--}}
     <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">

@@ -79,6 +79,7 @@
 
                         <fieldset class="rating">
                             <p>Your Rating:</p>
+
                             <input name="rating"
                                    type="radio"
                                    id="rating5"
@@ -124,6 +125,7 @@
                             <label for="rating1"
                                    title="1 stars"><i class="fa fa-star"></i>
                             </label>
+
                             <p>Outstanding</p>
                         </fieldset>
                         {{--<div submit-success>--}}
