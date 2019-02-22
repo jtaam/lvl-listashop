@@ -18,9 +18,7 @@
                     <li role="separator" class="divider"></li>
                     <li><a href="#"
                            onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}><i class="material-icons">input</i>Sign Out
-                        </a>
+                             document.getElementById('logout-form').submit();"><i class="material-icons">input</i>Log Out</a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
