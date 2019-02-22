@@ -7,9 +7,10 @@
         <div class="float-right">
             <ul class="header_social">
                 @guest
-                <li><a href="{{route('login')}}"><i class="fa fa-user"></i> Login</a></li>
+                <li><a href="{{route('login')}}"><i class="fa fa-sign-in"></i> Login</a></li>
+                <li><a href="{{route('register')}}"><i class="fa fa-user"></i> Register</a></li>
                 @else
-                <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-reddit-alien"> Dashboard</i></a></li>
+                <li><a href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"> Dashboard</i></a></li>
                 @endguest
                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
