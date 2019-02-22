@@ -14,9 +14,8 @@
 
                                     @if (isset($subCategory->categories))
                                         @foreach ($subCategory->categories as $category)
-                                            <li><a href="{{route('shop.productsByCategory', $category->slug)}}">{{title_case($category->name)}}</a></li>
+                                            <li class="{{Request::segment(3) == $category->slug ? 'active' : ''}}"><a href="{{route('shop.productsByCategory', $category->slug)}}">{{title_case($category->name)}}</a></li>
                                         @endforeach
-
                                     @endif
 
                                 </ul>
@@ -36,7 +35,7 @@
                 <ul class="list">
                     @if (isset($brands))
                         @foreach ($brands as $brand)
-                            <li><a href="#">{{ucfirst($brand->name)}}</a></li>
+                            <li class="{{Request::segment(3) == $brand->slug ? 'active' : ''}}"><a href="{{route('shop.productsByBrand', $brand->slug)}}">{{ucfirst($brand->name)}}</a></li>
                         @endforeach
                     @endif
 
@@ -44,19 +43,7 @@
 
                 </ul>
             </div>
-            <div class="widgets_inner">
-                <h4>Color</h4>
-                <ul class="list">
-                    @if (isset($colors))
-                        @foreach ($colors as $color)
-                            <li><a href="#">{{ucfirst($color->name)}}</a></li>
-                        @endforeach
-                    @endif
 
-                    {{--<li class="active"><a href="#">Black with red</a></li>--}}
-
-                </ul>
-            </div>
             <div class="widgets_inner">
                 <h4>Price</h4>
                 <div class="range_item">
@@ -67,6 +54,18 @@
                     </div>
                 </div>
             </div>
+
+            <div class="widgets_inner">
+                <h4>Color</h4>
+                <ul class="list">
+                    @if (isset($colors))
+                        @foreach ($colors as $color)
+                            <li class="{{Request::segment(3) == $color->slug ? 'active' : ''}}"><a href="{{route('shop.productsByColor', $color->slug)}}">{{ucfirst($color->name)}}</a></li>
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
+
         </aside>
     </div>
 </div>

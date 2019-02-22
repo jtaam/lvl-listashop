@@ -9,11 +9,15 @@
 Route::get('shop','frontend\shop\ShopController@shop')->name('shop.home');
 // Category
 Route::get('shop/category/{category}', 'frontend\shop\ShopController@productsByCategory')->name('shop.productsByCategory');
+// Brand
+Route::get('shop/brand/{brand}', 'frontend\shop\ShopController@productsByBrand')->name('shop.productsByBrand');
+// Color
+Route::get('shop/color/{color}', 'frontend\shop\ShopController@productsByColor')->name('shop.productsByColor');
 //// Tag
 //Route::get('/news/tag/{tag}', 'Frontend\News\ArticleController@articlesByTag')->name('articlesByTag');
 // Product
-Route::get('shop/product/{slug}','frontend\shop\ShopController@productDetails')->name('shop.product.details');
+Route::get('product/{slug}','frontend\shop\ShopController@productDetails')->name('shop.product.details');
 // Comment
-Route::post('shop/product/comment/{productId}','frontend\shop\CommentController@commentStore')->name('shop.comment.store');
+Route::post('product/comment/{productId}','frontend\shop\CommentController@commentStore')->name('shop.comment.store');
 // Review
-Route::post('shop/product/review/{productId}','frontend\shop\ReviewController@reviewStore')->name('shop.review.store');
+Route::post('product/review/{productId}','frontend\shop\ReviewController@reviewStore')->name('shop.review.store');

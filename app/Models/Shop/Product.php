@@ -35,4 +35,12 @@ class Product extends Model
     public function stock(){
         return $this->hasOne(Stock::class);
     }
+
+    public function brand(){
+        return $this->belongsTo(Brand::class);
+    }
+
+    public function color(){
+        return $this->belongsTo(Color::class);
+    }
 }

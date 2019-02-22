@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\frontend\shop;
 
+use App\Models\Shop\Brand;
 use App\Models\Shop\Category;
+use App\Models\Shop\Color;
 use App\Models\Shop\Product;
 use App\Models\Shop\Review;
 use Illuminate\Http\Request;
@@ -22,8 +24,20 @@ class ShopController extends Controller
 
     public function productsByCategory($slug){
         $category = Category::where('slug', $slug)->first();
-        $products = $category->products()->paginate(15)->onEachSide(3);
+        $products = $category->products()->paginate(9);
         return view('frontend.shop.productsByCategory', compact('products','category'));
+    }
+
+    public function productsByBrand($slug){
+        $brand = Brand::where('slug', $slug)->first();
+        $products = $brand->products()->paginate(9);
+        return view('frontend.shop.productsByBrand', compact('products','brand'));
+    }
+
+    public function productsByColor($slug){
+        $color = Color::where('slug', $slug)->first();
+        $products = $color->products()->paginate(9);
+        return view('frontend.shop.productsByColor', compact('products','color'));
     }
 
 //    public function articlesByTag($slug){
