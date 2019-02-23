@@ -137,10 +137,10 @@
                             <li><a class="active" href="{{route('shop.productsByCategory', $product->category->slug)}}"><span>Category</span> : {{ucfirst($product->category->name)}}</a></li>
                             <li>
                                 <a href="#"><span>Availibility</span> :
-                                    @if ($product->stock->amount > 0)
-                                        In Stock
-                                    @else
+                                    @if ($product->stock->amount < 1)
                                         No Stock
+                                    @else
+                                        In Stock
                                     @endif
                                 </a>
                             </li>
@@ -153,7 +153,7 @@
                             <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                         </div>
                         <div class="card_area">
-                            <a class="main_btn" href="#">Add to Cart</a>
+                            <a class="main_btn" href="{{route('cart.addItem', $product->id)}}">Add to Cart</a>
                             <a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
                             <a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
                         </div>

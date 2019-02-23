@@ -45,4 +45,8 @@ class ShopController extends Controller
 //        $articles = $tag->articles()->paginate(18)->onEachSide(1);
 //        return view('frontend.news.tag.index', compact('articles', 'tag'));
 //    }
+
+  public function showCart(){
+    return view('frontend.shop.cart');
+  }
 }

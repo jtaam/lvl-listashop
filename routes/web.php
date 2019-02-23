@@ -51,6 +51,7 @@ Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'backend', '
     //    Route::resource('tag', 'TagController');
     //    // Category
     //    Route::resource('category', 'CategoryController');
+
     //    // Post
     //    Route::resource('post', 'PostController');
     //    Route::get('pending/post', 'PostController@pending')->name('post.pending');
