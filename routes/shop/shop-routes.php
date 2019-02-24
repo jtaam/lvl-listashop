@@ -17,8 +17,8 @@ Route::get('shop/color/{color}', 'frontend\shop\ShopController@productsByColor')
 //Route::get('/news/tag/{tag}', 'Frontend\News\ArticleController@articlesByTag')->name('articlesByTag');
 //Route::get('cart','frontend\shop\ShopController@showCart')->name('shop.cart');
 // Cart
-Route::resource('cart', 'backend\dashboard\shop\CartController');
-Route::get('cart/{$id}/add', 'backend\dashboard\shop\CartController@addItem')->name('cart.addItem');
+Route::resource('shop/cart', 'backend\dashboard\shop\CartController');
+Route::get('shop/cart/{id}/add', 'backend\dashboard\shop\CartController@add')->name('cart.add');
 // Product
 Route::get('product/{slug}','frontend\shop\ShopController@productDetails')->name('shop.product.details');
 // Comment

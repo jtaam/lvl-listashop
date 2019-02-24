@@ -18,12 +18,14 @@
                   <th scope="col">Price</th>
                   <th scope="col">Quantity</th>
                   <th scope="col">Total</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
 
               @if (isset($cartItems))
                   @foreach ($cartItems as $cartItem)
+                    {{--{{dd($cartItem)}}--}}
                     <tr>
                       <td>
                         <div class="media">
@@ -31,22 +33,26 @@
                             <img src="{{asset('assets/frontend/img/product/single-product/cart-1.jpg')}}" alt="">
                           </div>
                           <div class="media-body">
-                            <p>{{$cartItem->title}}</p>
+                            <p>{{$cartItem->name}}</p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <h5>${{$cartItem->new_price}}</h5>
+                        <h5>${{$cartItem->price}}</h5>
                       </td>
                       <td>
                         <div class="product_count">
-                          <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-                          <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                          <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                          <input type="text" name="qty" id="sst-{{$cartItem->id}}" maxlength="12" value="{{$cartItem->qty}}" title="Quantity:" class="input-text qty">
+                          <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                          <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                         </div>
                       </td>
                       <td>
-                        <h5>$720.00</h5>
+                        <h5>${{$cartItem->price * $cartItem->qty}}</h5>
+                      </td>
+                      <td>
+                        <a href="" class="btn btn-warning btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i></a> |
+                        <a href="" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
                       </td>
                     </tr>
                   @endforeach
@@ -148,4 +154,9 @@
 @endsection
 
 @push('js')
+  <script>
+    $(document).ready(function () {
+      $(this).find('.flex-row-reverse').removeClass();
+    });
+  </script>
 @endpush

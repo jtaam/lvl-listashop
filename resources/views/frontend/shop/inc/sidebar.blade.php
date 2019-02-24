@@ -57,13 +57,22 @@
 
             <div class="widgets_inner">
                 <h4>Color</h4>
-                <ul class="list">
+                <div class="color-badges">
                     @if (isset($colors))
                         @foreach ($colors as $color)
-                            <li class="{{Request::segment(3) == $color->slug ? 'active' : ''}}"><a href="{{route('shop.productsByColor', $color->slug)}}">{{ucfirst($color->name)}}</a></li>
+                            <a href="{{route('shop.productsByColor', $color->slug)}}"><span class="badge" style="color: {{$color->hexcode}}; ">{{$color->name}}</span></a>
+                            {{--<li class="{{Request::segment(3) == $color->slug ? 'active' : ''}}"><a href="{{route('shop.productsByColor', $color->slug)}}">{{ucfirst($color->name)}}</a></li>--}}
                         @endforeach
                     @endif
-                </ul>
+                </div>
+                <!-- /.color-badges -->
+                {{--<ul class="list">--}}
+                    {{--@if (isset($colors))--}}
+                        {{--@foreach ($colors as $color)--}}
+                            {{--<li class="{{Request::segment(3) == $color->slug ? 'active' : ''}}"><a href="{{route('shop.productsByColor', $color->slug)}}">{{ucfirst($color->name)}}</a></li>--}}
+                        {{--@endforeach--}}
+                    {{--@endif--}}
+                {{--</ul>--}}
             </div>
 
         </aside>

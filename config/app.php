@@ -175,7 +175,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         // Shopping cart
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
 
     ],
 
@@ -227,7 +226,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         // Shopping cart
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
 
     ],

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend\dashboard\shop;
 
 use App\Models\Shop\Product;
+
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -63,13 +64,14 @@ class CartController extends Controller
         //
     }
 
-    public function addItem($id){
+    public function add($id){
 
         $product = Product::find($id);
 
         Cart::add($id, $product->title, 1, $product->new_price);
 
         return back();
+
     }
 
     /**

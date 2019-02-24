@@ -44,7 +44,7 @@
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="#" class="cart"><i class="lnr lnr lnr-cart"></i></a></li>
+                    <li class="nav-item"><a href="{{route('cart.index')}}" class="cart" style="position: relative"><i class="lnr lnr lnr-cart"></i> <span class="badge cart-badge" style="color: #c5322d; top: -3px; right: -12px; position: absolute;">{{Cart::count()}}</span></a></li>
                     <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
                 </ul>
             </div>
