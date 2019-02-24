@@ -1,4 +1,4 @@
-<div class="col-lg-3">
+<div class="col-lg-3 left_sidebar_parent">
     <div class="left_sidebar_area">
         <aside class="left_widgets cat_widgets">
             <div class="l_w_title">

@@ -25,4 +25,8 @@ Route::get('product/{slug}','frontend\shop\ShopController@productDetails')->name
 Route::post('product/comment/{productId}','frontend\shop\CommentController@commentStore')->name('shop.comment.store');
 // Review
 Route::post('product/review/{productId}','frontend\shop\ReviewController@reviewStore')->name('shop.review.store');
+// Shipping info
+Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'backend', 'middleware' => ['auth']], function(){
+    Route::get('shipping-info', 'dashboard\shop\CheckoutController@index')->name('shipping.info');
+});
 

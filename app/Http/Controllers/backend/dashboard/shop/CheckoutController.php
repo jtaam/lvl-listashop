@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers\backend\dashboard\shop;
 
-use App\Models\Shop\Product;
-
-use Brian2694\Toastr\Facades\Toastr;
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CartController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        $cartItems = Cart::content();
-        return view('frontend.shop.cart', compact('cartItems'));
+        return view('frontend.shop.shippingInfo');
     }
 
     /**
@@ -29,7 +24,7 @@ class CartController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -40,7 +35,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -60,22 +55,9 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
         //
-    }
-
-    public function add(Request $request,$id){
-
-        $product = Product::find($id);
-        if ($request->quantity > 1){
-            Cart::add($id, $product->title, $request->quantity , $product->new_price, ['image'=> $product->images[0]->image]);
-        }else{
-            Cart::add($id, $product->title, 1 , $product->new_price, ['image'=> $product->images[0]->image]);
-        }
-
-        return back();
-
     }
 
     /**
@@ -87,11 +69,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Cart::update($id,['qty'=>$request->qty]);
-
-        Toastr::success('Cart successfully updated.','Done!');
-
-        return back();
+        //
     }
 
     /**
@@ -102,10 +80,6 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        Cart::remove($id);
-
-        Toastr::success('Product removed from the cart.','Done!');
-
-        return back();
+        //
     }
 }

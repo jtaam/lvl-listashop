@@ -22,6 +22,11 @@
       width: 145px !important;
       height: 98px !important;
     }
+    @if(Request::segment(2) == 'cart')
+      .left_sidebar_parent{
+        display: none;
+      }
+    @endif
   </style>
 @endpush
 
@@ -171,8 +176,8 @@
                   </td>
                   <td>
                     <div class="checkout_btn_inner">
-                      <a class="gray_btn" href="#">Continue Shopping</a>
-                      <a class="main_btn" href="#">Proceed to checkout</a>
+                      <a class="gray_btn" href="{{route('shop.home')}}">Continue Shopping</a>
+                      <a class="main_btn" href="{{route('admin.shipping.info')}}">Proceed to checkout</a>
                     </div>
                   </td>
                 </tr>
