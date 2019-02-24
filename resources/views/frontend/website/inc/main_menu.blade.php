@@ -18,8 +18,8 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu">
                             <li class="nav-item"><a class="nav-link" href="{{route('shop.home')}}">All Products</a>
-                            <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a>
-                            <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('admin.shipping.info')}}">Product Checkout</a>
+                            <li class="nav-item"><a class="nav-link" href="{{route('cart.index')}}">Shopping Cart</a></li>
                             <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
                         </ul>
                     </li>

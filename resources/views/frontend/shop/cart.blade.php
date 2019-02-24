@@ -55,10 +55,12 @@
                       <td>
                         <div class="media">
                           <div class="d-flex">
-                            <img src="{{$cartItem->options->image}}" alt="{{$cartItem->name}}" class="cart-item">
+                            <a href="{{route('shop.product.details', $cartItem->options->slug)}}" target="_blank">
+                              <img src="{{$cartItem->options->image}}" alt="{{$cartItem->name}}" class="cart-item">
+                            </a>
                           </div>
                           <div class="media-body">
-                            <p>{{$cartItem->name}}</p>
+                            <p><a href="{{route('shop.product.details', $cartItem->options->slug)}}" class="text-dark" target="_blank">{{$cartItem->name}}</a></p>
                           </div>
                         </div>
                       </td>

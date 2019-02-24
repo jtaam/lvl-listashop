@@ -69,9 +69,9 @@ class CartController extends Controller
 
         $product = Product::find($id);
         if ($request->quantity > 1){
-            Cart::add($id, $product->title, $request->quantity , $product->new_price, ['image'=> $product->images[0]->image]);
+            Cart::add($id, $product->title, $request->quantity , $product->new_price, ['slug'=>$product->slug, 'image'=> $product->images[0]->image]);
         }else{
-            Cart::add($id, $product->title, 1 , $product->new_price, ['image'=> $product->images[0]->image]);
+            Cart::add($id, $product->title, 1 , $product->new_price, ['slug'=>$product->slug, 'image'=> $product->images[0]->image]);
         }
 
         return back();
