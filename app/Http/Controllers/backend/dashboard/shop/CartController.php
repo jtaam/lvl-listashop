@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend\dashboard\shop;
 
 use App\Models\Shop\Product;
 
+use Brian2694\Toastr\Facades\Toastr;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -39,7 +40,7 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        dd();
+
     }
 
     /**
@@ -68,7 +69,7 @@ class CartController extends Controller
 
         $product = Product::find($id);
 
-        Cart::add($id, $product->title, 1, $product->new_price);
+        Cart::add($id, $product->title, 1, $product->new_price, ['image'=> $product->images[0]->image]);
 
         return back();
 
@@ -83,7 +84,11 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Cart::update($id,['qty'=>$request->qty]);
+
+        Toastr::success('Cart successfully updated.','Done!');
+
+        return back();
     }
 
     /**
@@ -94,6 +99,10 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+
+        Toastr::success('Product removed from the cart.','Done!');
+
+        return back();
     }
 }

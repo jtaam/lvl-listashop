@@ -2,7 +2,27 @@
 
 @section('title', 'Cart')
 
+
 @push('css')
+  {{--Toastrjs--}}
+  <link rel="stylesheet" href="https://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
+  <style>
+    .product_count{
+      position: relative;
+    }
+    .cart-update{
+      position: absolute;
+      top: 5px;
+      left: 105px;
+      background-color: #ffc107 !important;
+      border-color: #ffc107 !important;
+      color: #0D0A0A !important;
+    }
+    .cart-item{
+      width: 145px !important;
+      height: 98px !important;
+    }
+  </style>
 @endpush
 
 @section('content')
@@ -17,8 +37,8 @@
                   <th scope="col">Product</th>
                   <th scope="col">Price</th>
                   <th scope="col">Quantity</th>
+                  <th scope="col">Remove</th>
                   <th scope="col">Total</th>
-                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -30,7 +50,7 @@
                       <td>
                         <div class="media">
                           <div class="d-flex">
-                            <img src="{{asset('assets/frontend/img/product/single-product/cart-1.jpg')}}" alt="">
+                            <img src="{{$cartItem->options->image}}" alt="{{$cartItem->name}}" class="cart-item">
                           </div>
                           <div class="media-body">
                             <p>{{$cartItem->name}}</p>
@@ -42,18 +62,29 @@
                       </td>
                       <td>
                         <div class="product_count">
-                          <input type="text" name="qty" id="sst-{{$cartItem->id}}" maxlength="12" value="{{$cartItem->qty}}" title="Quantity:" class="input-text qty">
-                          <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                          <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                          <form action="{{route('cart.update', $cartItem->rowId)}}" method="post">
+                              @csrf
+                              @method('PUT')
+                            <input type="text" name="qty" id="sst-{{$cartItem->id}}" maxlength="12" value="{{$cartItem->qty}}" title="Quantity:" class="input-text qty" />
+                            <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+                            <button onclick="var result = document.getElementById('sst-{{$cartItem->id}}'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                            <button type="submit" class="btn-warning btn-sm cart-update"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                          </form>
                         </div>
+                      </td>
+
+                      <td>
+                        <form action="{{route('cart.destroy', $cartItem->rowId)}}"  method="POST">
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        </form>
+
                       </td>
                       <td>
                         <h5>${{$cartItem->price * $cartItem->qty}}</h5>
                       </td>
-                      <td>
-                        <a href="" class="btn btn-warning btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i></a> |
-                        <a href="" class="btn btn-sm btn-danger"><i class="fa fa-times" aria-hidden="true"></i></a>
-                      </td>
+
                     </tr>
                   @endforeach
               @endif
@@ -154,6 +185,9 @@
 @endsection
 
 @push('js')
+  {{--Toastr--}}
+  <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+  {!! Toastr::message() !!}
   <script>
     $(document).ready(function () {
       $(this).find('.flex-row-reverse').removeClass();

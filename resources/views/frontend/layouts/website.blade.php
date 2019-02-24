@@ -27,5 +27,6 @@
 
 <!-- Optional JavaScript -->
     @include('frontend.website.partials.footer_scripts')
+
 </body>
 </html>
