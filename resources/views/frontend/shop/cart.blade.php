@@ -99,6 +99,7 @@
 
                   </td>
                   <td>
+                    <td></td>
 
                   </td>
                   <td>
@@ -109,11 +110,13 @@
                     </div>
                   </td>
                 </tr>
-                <tr>
+
+              <tr>
                   <td>
 
                   </td>
                   <td>
+                    <td></td>
 
                   </td>
                   <td>
@@ -123,13 +126,13 @@
                     <h5>$2160.00</h5>
                   </td>
                 </tr>
+
                 <tr class="shipping_area">
                   <td>
 
                   </td>
-                  <td>
-
-                  </td>
+                  <td></td>
+                  <td></td>
                   <td>
                     <h5>Shipping</h5>
                   </td>
@@ -161,9 +164,8 @@
                   <td>
 
                   </td>
-                  <td>
-
-                  </td>
+                  <td></td>
+                  <td></td>
                   <td>
 
                   </td>

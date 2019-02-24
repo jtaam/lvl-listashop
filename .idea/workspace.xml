@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/layouts/website.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/partials/footer_scripts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/partials/footer_scripts.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/partials/head_styles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/partials/head_styles.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="247">
+              <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -451,12 +446,12 @@
       <workItem from="1550891995905" duration="1634000" />
       <workItem from="1550911181245" duration="4800000" />
       <workItem from="1550917585348" duration="282000" />
-      <workItem from="1550965021562" duration="11571000" />
+      <workItem from="1550965021562" duration="12242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143784000" />
+    <option name="totallyTimeSpent" value="144455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1284" height="1001" extended-state="6" />
@@ -828,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="247">
+          <caret line="101" column="24" selection-start-line="101" selection-start-column="24" selection-end-line="101" selection-end-column="24" />
         </state>
       </provider>
     </entry>
