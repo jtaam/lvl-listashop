@@ -9,17 +9,19 @@
 
                     @if (isset($parentCategories))
                         @foreach ($parentCategories as $subCategory)
-                            <li><a href="#">{{title_case($subCategory->name)}}</a>
-                                <ul class="list">
+                            @if ($subCategory->categories->count() > 0)
+                                <li><a href="#">{{title_case($subCategory->name)}}</a>
+                                    <ul class="list">
 
-                                    @if (isset($subCategory->categories))
-                                        @foreach ($subCategory->categories as $category)
-                                            <li class="{{Request::segment(3) == $category->slug ? 'active' : ''}}"><a href="{{route('shop.productsByCategory', $category->slug)}}">{{title_case($category->name)}}</a></li>
-                                        @endforeach
-                                    @endif
+                                        @if (isset($subCategory->categories))
+                                            @foreach ($subCategory->categories as $category)
+                                                <li class="{{Request::segment(3) == $category->slug ? 'active' : ''}}"><a href="{{route('shop.productsByCategory', $category->slug)}}">{{title_case($category->name)}}</a></li>
+                                            @endforeach
+                                        @endif
 
-                                </ul>
-                            </li>
+                                    </ul>
+                                </li>
+                            @endif
                         @endforeach
                     @endif
 
@@ -35,12 +37,11 @@
                 <ul class="list">
                     @if (isset($brands))
                         @foreach ($brands as $brand)
-                            <li class="{{Request::segment(3) == $brand->slug ? 'active' : ''}}"><a href="{{route('shop.productsByBrand', $brand->slug)}}">{{ucfirst($brand->name)}}</a></li>
+                            @if ($brand->products->count() > 0)
+                                <li class="{{Request::segment(3) == $brand->slug ? 'active' : ''}}"><a href="{{route('shop.productsByBrand', $brand->slug)}}">{{ucfirst($brand->name)}}</a></li>
+                            @endif
                         @endforeach
                     @endif
-
-                    {{--<li class="active"><a href="#">Gionee</a></li>--}}
-
                 </ul>
             </div>
 
@@ -60,8 +61,9 @@
                 <div class="color-badges">
                     @if (isset($colors))
                         @foreach ($colors as $color)
-                            <a href="{{route('shop.productsByColor', $color->slug)}}"><span class="badge" style="color: {{$color->hexcode}}; ">{{$color->name}}</span></a>
-                            {{--<li class="{{Request::segment(3) == $color->slug ? 'active' : ''}}"><a href="{{route('shop.productsByColor', $color->slug)}}">{{ucfirst($color->name)}}</a></li>--}}
+                            @if ($color->products->count() > 0)
+                                <a href="{{route('shop.productsByColor', $color->slug)}}"><span class="badge" style="color: {{$color->hexcode}}; ">{{$color->name}}</span></a>
+                            @endif
                         @endforeach
                     @endif
                 </div>
