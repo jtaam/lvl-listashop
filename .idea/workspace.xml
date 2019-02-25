@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3e384a1-83f0-4ab5-8189-4aeef549816f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,46 +51,44 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="21" column="94" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+        <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/stocks">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+            <state relative-caret-position="294">
+              <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="57" column="112" selection-start-line="57" selection-start-column="112" selection-end-line="57" selection-end-column="112" />
+            <state relative-caret-position="266">
+              <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Shop/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-              <folding>
-                <element signature="e#63#91#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="722">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Shop/Stock.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -145,7 +142,6 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/productsByBrand.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/productsByCategory.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/productsByColor.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/latest_product_area.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/checkout.blade.php" />
@@ -157,9 +153,10 @@
         <option value="$PROJECT_DIR$/resources/views/frontend/website/partials/head_styles.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/partials/head_styles.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/shop/CartController.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php" />
       </list>
     </option>
   </component>
@@ -277,6 +274,24 @@
               <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
               <item name="listashop" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listashop" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listashop" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="listashop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="listashop" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Shop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -348,18 +363,19 @@
       <workItem from="1550911181245" duration="4800000" />
       <workItem from="1550917585348" duration="282000" />
       <workItem from="1550965021562" duration="13376000" />
-      <workItem from="1550994097289" duration="6950000" />
+      <workItem from="1550994097289" duration="7068000" />
+      <workItem from="1551053298289" duration="3401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152539000" />
+    <option name="totallyTimeSpent" value="156058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="25" width="1284" height="1001" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49595377" weight="0.21799028" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49595377" weight="0.22204214" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.50404626" side_tool="true" weight="0.18962723" />
@@ -387,16 +403,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/backend/dashboard/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding>
-            <element signature="e#58#86#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/website/view-composers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
@@ -421,13 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="20" column="117" selection-start-line="20" selection-start-column="117" selection-end-line="20" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Shop/Product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -462,23 +461,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/carts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_23_102905_create_shoppingcart_table.php" />
     <entry file="file://$PROJECT_DIR$/config/cart.php" />
     <entry file="file://$PROJECT_DIR$/config/shopping_cart.php" />
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/stocks">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/colors">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -504,13 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/shoppingcart">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -568,13 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="136" column="143" selection-start-line="136" selection-start-column="143" selection-end-line="136" selection-end-column="143" />
         </state>
       </provider>
     </entry>
@@ -692,9 +663,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/carts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/shoppingcart">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/frontend/website/inc/main_menu.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
+        <state relative-caret-position="798">
           <caret line="21" column="94" selection-start-line="21" selection-start-column="94" selection-end-line="21" selection-end-column="94" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#nav#0;n#div#0;n#!!top" expanded="true" />
@@ -703,10 +688,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+        <state relative-caret-position="256">
+          <caret line="57" column="112" selection-start-line="57" selection-start-column="112" selection-end-line="57" selection-end-column="112" />
         </state>
       </provider>
     </entry>
@@ -720,10 +705,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/cart.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Models/Shop/Stock.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://93de231a-2633-4cc1-a996-6d339dd19c3d/schema/laravel_tamjid_listashop/table/stocks">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Shop/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="57" column="112" selection-start-line="57" selection-start-column="112" selection-end-line="57" selection-end-column="112" />
+        <state relative-caret-position="722">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/details.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="139" column="36" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/frontend/shop/inc/home_banner.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
         </state>
       </provider>
     </entry>

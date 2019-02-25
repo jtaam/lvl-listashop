@@ -137,11 +137,7 @@
                             <li><a class="active" href="{{route('shop.productsByCategory', $product->category->slug)}}"><span>Category</span> : {{ucfirst($product->category->name)}}</a></li>
                             <li>
                                 <a href="#"><span>Availibility</span> :
-                                    @if ($product->stock->amount < 1)
-                                        No Stock
-                                    @else
-                                        In Stock
-                                    @endif
+                                    In Stock
                                 </a>
                             </li>
                         </ul>
