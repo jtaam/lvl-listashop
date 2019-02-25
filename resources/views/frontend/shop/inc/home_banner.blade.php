@@ -3,8 +3,6 @@
         <div class="container">
             <div class="banner_content text-center">
 
-
-{{--                    <h2>{{ucfirst(Request::segment(1))}}</h2>--}}
                 <h2>
                     @php
                         $var = collect(request()->segments())->last();
@@ -12,11 +10,10 @@
                     @endphp
                 </h2>
 
-                    <div class="page_link">
-                        <a href="{{route('homepage')}}">Home</a>
-                        <a href="{{route('shop.home')}}">Shop</a>
-                    </div>
-
+                <div class="page_link">
+                    <a href="{{route('homepage')}}">Home</a>
+                    <a href="{{route('shop.home')}}">Shop</a>
+                </div>
 
             </div>
         </div>
