@@ -21,11 +21,7 @@
                     <option value="4">Show 16</option>
                 </select>
             </div>
-            <div class="right_page ml-auto">
-                <nav class="cat_page" aria-label="Page navigation example">
-                    {{$products->onEachSide(2)->links('vendor.pagination.shop')}}
-                </nav>
-            </div>
+            @include('frontend.shop.inc.products-pagination')
         </div>
 
         <div class="latest_product_inner row">
