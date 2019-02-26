@@ -188,7 +188,9 @@
                                         return actions.order.create({
                                             purchase_units: [{
                                                 amount: {
-                                                    value: "{{ Cart::total(2) }}"
+                                                    value: '@php
+                                                                echo str_replace(',','', $price = Cart::total(2));
+                                                            @endphp',
                                                 }
                                             }]
                                         });
