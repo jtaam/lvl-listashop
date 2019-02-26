@@ -132,5 +132,9 @@
 @endsection
 
 @push('js')
-
+    <script>
+        $(document).ready(function () {
+            $(this).find('.flex-row-reverse').removeClass();
+        });
+    </script>
 @endpush

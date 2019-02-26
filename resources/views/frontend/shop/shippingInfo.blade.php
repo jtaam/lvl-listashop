@@ -200,8 +200,10 @@
                                         return actions.order.capture().then(function(details) {
                                             // Show a success message to your buyer
                                             // alert('Transaction completed by ' + details.payer.name.given_name);
+                                            var url= "{{route('admin.shipping.confirmation')}}";
+                                            window.location = url;
                                             // Call your server to save the transaction
-                                            return fetch('{{route('admin.shipping.confirmation')}}', {
+                                            return fetch('', {
                                                 method: 'post',
                                                 body: JSON.stringify({
                                                     orderID: data.orderID
