@@ -127,10 +127,10 @@
 
                   </td>
                   <td>
-                    <h5>Subtotal</h5>
+                    <h5>Subtotal <small>(tax excluded)</small></h5>
                   </td>
                   <td>
-                    <h5>$2160.00</h5>
+                    <h5>${{Cart::subtotal(2)}}</h5>
                   </td>
                 </tr>
 

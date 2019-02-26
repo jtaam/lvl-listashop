@@ -112,17 +112,23 @@
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Your Order</h2>
+
                             <ul class="list">
                                 <li><a href="#">Product <span>Total</span></a></li>
-                                <li><a href="#">Fresh Blackberry <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                                <li><a href="#">Fresh Tomatoes <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
-                                <li><a href="#">Fresh Brocoli <span class="middle">x 02</span> <span class="last">$720.00</span></a></li>
+                                @if (isset($cartItems))
+                                    @foreach ($cartItems as $cartItem)
+                                        <li><a href="{{route('shop.product.details', $cartItem->options->slug)}}">{{str_limit($cartItem->name,15,'...')}} <span class="middle">x {{$cartItem->qty}}</span> <span class="last">${{$cartItem->price}}</span></a></li>
+                                    @endforeach
+                                @endif
+
                             </ul>
+
                             <ul class="list list_2">
-                                <li><a href="#">Subtotal <span>$2160.00</span></a></li>
+                                <li><a href="#">Subtotal <span>${{Cart::total(2)}}</span></a></li>
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
                                 <li><a href="#">Total <span>$2210.00</span></a></li>
                             </ul>
+
                             <div class="payment_item">
                                 <div class="radion_btn">
                                     <input type="radio" id="f-option5" name="selector">

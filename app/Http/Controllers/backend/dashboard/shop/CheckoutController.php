@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\backend\dashboard\shop;
 
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,8 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        return view('frontend.shop.shippingInfo');
+        $cartItems = Cart::content();
+        return view('frontend.shop.shippingInfo', compact('cartItems'));
     }
 
     /**
