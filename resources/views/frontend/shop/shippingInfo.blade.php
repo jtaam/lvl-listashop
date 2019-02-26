@@ -3,7 +3,12 @@
 @section('title','Checkout')
 
 @push('css')
-
+    <style>
+        .shipping-cart-list a{
+            text-decoration: none;
+            color: #222;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -112,46 +117,98 @@
                     <div class="col-lg-4">
                         <div class="order_box">
                             <h2>Your Order</h2>
+                            <div class="table-responsive">
+                                <table class="table shipping-cart-list">
+                                    <thead>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    </thead>
+                                    <tbody>
+                                    @if (isset($cartItems))
+                                        @foreach ($cartItems as $cartItem)
+                                            <tr>
+                                                <td><a href="{{route('cart.index')}}">{{str_limit($cartItem->name,15,'...')}}</a></td>
+                                                <td>X {{$cartItem->qty}}</td>
+                                                <td>${{$cartItem->total(2)}}</td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
+                                    </tbody>
+                                </table>
+                            </div>
 
-                            <ul class="list">
-                                <li><a href="#">Product <span>Total</span></a></li>
-                                @if (isset($cartItems))
-                                    @foreach ($cartItems as $cartItem)
-                                        <li><a href="{{route('shop.product.details', $cartItem->options->slug)}}">{{str_limit($cartItem->name,15,'...')}} <span class="middle">x {{$cartItem->qty}}</span> <span class="last">${{$cartItem->price}}</span></a></li>
-                                    @endforeach
-                                @endif
 
-                            </ul>
+                            {{--<ul class="list">--}}
+                                {{--<li><a href="#">Product <span>Total</span></a></li>--}}
+                                {{--@if (isset($cartItems))--}}
+                                    {{--@foreach ($cartItems as $cartItem)--}}
+                                        {{--<li><a href="{{route('shop.product.details', $cartItem->options->slug)}}">{{str_limit($cartItem->name,15,'...')}} <span class="middle">x {{$cartItem->qty}}</span> <span class="last">${{$cartItem->price}}</span></a></li>--}}
+                                    {{--@endforeach--}}
+                                {{--@endif--}}
+
+                            {{--</ul>--}}
 
                             <ul class="list list_2">
-                                <li><a href="#">Subtotal <span>${{Cart::total(2)}}</span></a></li>
+                                <li><a href="#">Subtotal (+ tax)<span>${{Cart::total(2)}}</span></a></li>
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
                                 <li><a href="#">Total <span>$2210.00</span></a></li>
                             </ul>
 
-                            <div class="payment_item">
-                                <div class="radion_btn">
-                                    <input type="radio" id="f-option5" name="selector">
-                                    <label for="f-option5">Check payments</label>
-                                    <div class="check"></div>
-                                </div>
-                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                            </div>
-                            <div class="payment_item active">
-                                <div class="radion_btn">
-                                    <input type="radio" id="f-option6" name="selector">
-                                    <label for="f-option6">Paypal </label>
-                                    <img src="{{asset('assets/frontend/img/product/single-product/card.jpg')}}" alt="paypal">
-                                    <div class="check"></div>
-                                </div>
-                                <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                            </div>
+                            {{--<div class="payment_item">--}}
+                                {{--<div class="radion_btn">--}}
+                                    {{--<input type="radio" id="f-option5" name="selector">--}}
+                                    {{--<label for="f-option5">Check payments</label>--}}
+                                    {{--<div class="check"></div>--}}
+                                {{--</div>--}}
+                                {{--<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="payment_item active">--}}
+                                {{--<div class="radion_btn">--}}
+                                    {{--<input type="radio" id="f-option6" name="selector">--}}
+                                    {{--<label for="f-option6">Paypal </label>--}}
+                                    {{--<img src="{{asset('assets/frontend/img/product/single-product/card.jpg')}}" alt="paypal">--}}
+                                    {{--<div class="check"></div>--}}
+                                {{--</div>--}}
+                                {{--<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>--}}
+                            {{--</div>--}}
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector">
                                 <label for="f-option4">I’ve read and accept the </label>
                                 <a href="#">terms &amp; conditions*</a>
                             </div>
-                            <a class="main_btn" href="#">Proceed to Paypal</a>
+                            {{--<a class="main_btn" href="#">Proceed to Paypal</a>--}}
+                            <div id="paypal-button-container"></div>
+                            <!-- /#paypal-button-container -->
+                            <script src="https://www.paypal.com/sdk/js?client-id={{env('PAYPAL_CLIENT_ID')}}"></script>
+                            <script>
+                                paypal.Buttons({
+                                    createOrder: function(data, actions) {
+                                        // Set up the transaction
+                                        return actions.order.create({
+                                            purchase_units: [{
+                                                amount: {
+                                                    value: "{{ Cart::total(2) }}"
+                                                }
+                                            }]
+                                        });
+                                    },
+                                    onApprove: function(data, actions) {
+                                        // Capture the funds from the transaction
+                                        return actions.order.capture().then(function(details) {
+                                            // Show a success message to your buyer
+                                            // alert('Transaction completed by ' + details.payer.name.given_name);
+                                            // Call your server to save the transaction
+                                            return fetch('{{route('admin.shipping.confirmation')}}', {
+                                                method: 'post',
+                                                body: JSON.stringify({
+                                                    orderID: data.orderID
+                                                })
+                                            });
+                                        });
+                                    }
+                                }).render('#paypal-button-container');
+                            </script>
                         </div>
                     </div>
                 </div>
