@@ -28,6 +28,7 @@ Route::post('product/review/{productId}','frontend\shop\ReviewController@reviewS
 // Shipping info
 Route::group(['as' => 'admin.', 'prefix' => 'admin', 'namespace' => 'backend', 'middleware' => ['auth']], function(){
     Route::get('shipping-info', 'dashboard\shop\CheckoutController@index')->name('shipping.info');
-    Route::get('shipping-confirmation/{rowId}','dashboard\shop\CheckoutController@confirmation')->name('shipping.confirmation');
+    Route::get('shipping-confirmation','dashboard\shop\CheckoutController@confirmation')->name('shipping.confirmation');
+    Route::resource('address','dashboard\shop\AddressController');
 });
 

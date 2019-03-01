@@ -12,44 +12,45 @@
 @endpush
 
 @section('content')
-    <section class="checkout_area p_120">
+    <section class="checkout_area p_60">
         <div class="container">
-            <div class="returning_customer">
-                <div class="check_title">
-                    <h2>Returning Customer? <a href="#">Click here to login</a></h2>
-                </div>
-                <p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>
-                <form class="row contact_form" action="#" method="post" novalidate="novalidate" _lpchecked="1">
-                    <div class="col-md-6 form-group p_star">
-                        <input type="text" class="form-control" id="name" name="name" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                        <span class="placeholder" data-placeholder="Username or Email"></span>
-                    </div>
-                    <div class="col-md-6 form-group p_star">
-                        <input type="password" class="form-control" id="password" name="password" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
-                        <span class="placeholder" data-placeholder="Password"></span>
-                    </div>
-                    <div class="col-md-12 form-group">
-                        <button type="submit" value="submit" class="btn submit_btn">Send Message</button>
-                        <div class="creat_account">
-                            <input type="checkbox" id="f-option" name="selector">
-                            <label for="f-option">Remember me</label>
-                        </div>
-                        <a class="lost_pass" href="#">Lost your password?</a>
-                    </div>
-                </form>
-            </div>
-            <div class="cupon_area">
-                <div class="check_title">
-                    <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>
-                </div>
-                <input type="text" placeholder="Enter coupon code">
-                <a class="tp_btn" href="#">Apply Coupon</a>
-            </div>
+            {{--<div class="returning_customer">--}}
+                {{--<div class="check_title">--}}
+                    {{--<h2>Returning Customer? <a href="#">Click here to login</a></h2>--}}
+                {{--</div>--}}
+                {{--<p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>--}}
+                {{--<form class="row contact_form" action="#" method="post" novalidate="novalidate" _lpchecked="1">--}}
+                    {{--<div class="col-md-6 form-group p_star">--}}
+                        {{--<input type="text" class="form-control" id="name" name="name" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">--}}
+                        {{--<span class="placeholder" data-placeholder="Username or Email"></span>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-6 form-group p_star">--}}
+                        {{--<input type="password" class="form-control" id="password" name="password" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">--}}
+                        {{--<span class="placeholder" data-placeholder="Password"></span>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-12 form-group">--}}
+                        {{--<button type="submit" value="submit" class="btn submit_btn">Send Message</button>--}}
+                        {{--<div class="creat_account">--}}
+                            {{--<input type="checkbox" id="f-option" name="selector">--}}
+                            {{--<label for="f-option">Remember me</label>--}}
+                        {{--</div>--}}
+                        {{--<a class="lost_pass" href="#">Lost your password?</a>--}}
+                    {{--</div>--}}
+                {{--</form>--}}
+            {{--</div>--}}
+            {{--<div class="cupon_area">--}}
+                {{--<div class="check_title">--}}
+                    {{--<h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>--}}
+                {{--</div>--}}
+                {{--<input type="text" placeholder="Enter coupon code">--}}
+                {{--<a class="tp_btn" href="#">Apply Coupon</a>--}}
+            {{--</div>--}}
             <div class="billing_details">
                 <div class="row">
                     <div class="col-lg-8">
                         <h3>Billing Details</h3>
-                        <form class="row contact_form" action="#" method="post" novalidate="novalidate" _lpchecked="1">
+                        <form class="row contact_form" action="{{route('admin.address.store')}}" method="post" novalidate="novalidate" _lpchecked="1">
+                            @csrf
                             <div class="col-md-6 form-group p_star">
                                 <input type="text" class="form-control" id="first" name="name" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
                                 <span class="placeholder" data-placeholder="First name"></span>
@@ -139,16 +140,6 @@
                             </div>
 
 
-                            {{--<ul class="list">--}}
-                                {{--<li><a href="#">Product <span>Total</span></a></li>--}}
-                                {{--@if (isset($cartItems))--}}
-                                    {{--@foreach ($cartItems as $cartItem)--}}
-                                        {{--<li><a href="{{route('shop.product.details', $cartItem->options->slug)}}">{{str_limit($cartItem->name,15,'...')}} <span class="middle">x {{$cartItem->qty}}</span> <span class="last">${{$cartItem->price}}</span></a></li>--}}
-                                    {{--@endforeach--}}
-                                {{--@endif--}}
-
-                            {{--</ul>--}}
-
                             <ul class="list list_2">
                                 <li><a href="#">Subtotal (+ tax)<span>${{Cart::total(2)}}</span></a></li>
                                 <li><a href="#">Shipping <span>Flat rate: $50.00</span></a></li>
@@ -184,7 +175,8 @@
                                         return actions.order.capture().then(function(details) {
                                             // Show a success message to your buyer
                                             // alert('Transaction completed by ' + details.payer.name.given_name);
-                                            var url= "{{route('admin.shipping.confirmation', $rowId)}}";
+
+                                            var url= "{{route('admin.shipping.confirmation')}}";
                                             window.location = url;
                                             // Call your server to save the transaction
                                             return fetch('', {

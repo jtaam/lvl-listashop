@@ -85,8 +85,8 @@ class CheckoutController extends Controller
         //
     }
 
-    public function confirmation($rowId){
-        
+    public function confirmation(){
+        Cart::destroy();
         return view('frontend.shop.confirmation');
     }
 }
