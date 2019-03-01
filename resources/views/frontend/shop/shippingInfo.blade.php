@@ -155,23 +155,7 @@
                                 <li><a href="#">Total <span>$2210.00</span></a></li>
                             </ul>
 
-                            {{--<div class="payment_item">--}}
-                                {{--<div class="radion_btn">--}}
-                                    {{--<input type="radio" id="f-option5" name="selector">--}}
-                                    {{--<label for="f-option5">Check payments</label>--}}
-                                    {{--<div class="check"></div>--}}
-                                {{--</div>--}}
-                                {{--<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>--}}
-                            {{--</div>--}}
-                            {{--<div class="payment_item active">--}}
-                                {{--<div class="radion_btn">--}}
-                                    {{--<input type="radio" id="f-option6" name="selector">--}}
-                                    {{--<label for="f-option6">Paypal </label>--}}
-                                    {{--<img src="{{asset('assets/frontend/img/product/single-product/card.jpg')}}" alt="paypal">--}}
-                                    {{--<div class="check"></div>--}}
-                                {{--</div>--}}
-                                {{--<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>--}}
-                            {{--</div>--}}
+
                             <div class="creat_account">
                                 <input type="checkbox" id="f-option4" name="selector">
                                 <label for="f-option4">I’ve read and accept the </label>
@@ -200,7 +184,7 @@
                                         return actions.order.capture().then(function(details) {
                                             // Show a success message to your buyer
                                             // alert('Transaction completed by ' + details.payer.name.given_name);
-                                            var url= "{{route('admin.shipping.confirmation')}}";
+                                            var url= "{{route('admin.shipping.confirmation', $rowId)}}";
                                             window.location = url;
                                             // Call your server to save the transaction
                                             return fetch('', {

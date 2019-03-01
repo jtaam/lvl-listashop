@@ -85,7 +85,8 @@ class CheckoutController extends Controller
         //
     }
 
-    public function confirmation(){
+    public function confirmation($rowId){
+        
         return view('frontend.shop.confirmation');
     }
 }
